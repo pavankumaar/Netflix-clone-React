@@ -5,7 +5,7 @@ function DeviceSvg(props) {
   const device = props.device
   return (
     <>
-      {device === 'mobile' && (
+      {device === 'phone' && (
         <svg
           width='24'
           height='24'

@@ -1,0 +1,102 @@
+.planform-body {
+  height: 150vh;
+}
+
+.planform-body-container {
+  margin-top: -50px;
+  width: fit-content;
+}
+
+.planform-ul {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+.planform-li {
+  margin-bottom: 0 !important;
+}
+.planform-table table {
+  border-collapse: collapse;
+}
+.planform-table tr {
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.planform-table .td-title {
+  font-size: 17px;
+  width: 300px;
+}
+.planform-table .td-text {
+  text-align: center;
+  width: 125px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #737373;
+}
+.planform-table td {
+  padding: 20px;
+  padding-bottom: 21px;
+  outline: none;
+  vertical-align: top;
+}
+.planform-table svg {
+  height: 25px;
+  width: 25px;
+}
+.planform-table .device-title {
+  text-transform: capitalize;
+  margin-top: -3px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.plan-item-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  margin-right: 27px;
+  position: sticky;
+  top: 0px;
+  padding-top: 10px;
+  background-color: white;
+}
+.plan-item-container .plan-item {
+  width: 120px;
+  height: 120px;
+  background-color: #e50914;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 42px;
+  border-radius: 3px;
+  font-size: 17px;
+  font-weight: 700;
+}
+.pointer {
+  background-color: #e50914;
+  height: 17px;
+  width: 17px;
+  position: absolute;
+  transform: rotate(45deg);
+  margin-top: -10px;
+  margin-left: 93px;
+}
+.selected {
+  color: #e50914 !important;
+}
+
+.planform-submit {
+  display: flex;
+  justify-content: center;
+}
+.planform-submit button {
+  width: 450px !important;
+  border-radius: 3px !important;
+}
+.end-content {
+  margin-top: 10px;
+  width: 900px;
+  font-size: 13px;
+}

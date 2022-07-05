@@ -6,6 +6,7 @@ import SignIn from './pages/SignIn/SignIn'
 import Registration from './pages/Registration/Registration'
 import RegForm from './pages/RegForm/RegForm'
 import Plan from './pages/Plan/Plan'
+import PlanForm from './pages/PlanForm/PlanForm'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/signup/registration' element={<Registration />}></Route>
         <Route path='/signup/regform' element={<RegForm />}></Route>
         <Route path='/signup/plan' element={<Plan />}></Route>
+        <Route path='/signup/planform' element={<PlanForm />}></Route>
       </Routes>
     </Router>
   )

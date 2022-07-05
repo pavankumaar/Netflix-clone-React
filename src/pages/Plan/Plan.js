@@ -50,7 +50,7 @@ class Plan extends Component {
                 </ul>
               </div>
               <div>
-                <Link to='/signup/regform'>
+                <Link to='/signup/planform'>
                   <button className='reg-submit'>Next</button>
                 </Link>
               </div>
