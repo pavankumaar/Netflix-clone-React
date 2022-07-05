@@ -1,0 +1,156 @@
+.signin-container {
+  text-align: left;
+  position: absolute;
+  color: white;
+  z-index: 1;
+  top: 15%;
+  color: white;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 60px 60px 100px 60px;
+  border-radius: 5px;
+  transform: translate(-50%, -15%);
+}
+.signin-container .signin-form {
+  display: grid;
+  margin-top: 30px;
+}
+.signin-container .signin-title {
+  z-index: 10;
+  font-size: 30px;
+  font-weight: 700;
+}
+.signin-input-container {
+  display: grid;
+  background-color: #333;
+  height: 50px;
+  width: 314px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.signin-container input {
+  background-color: transparent;
+  color: white !important;
+  outline: none;
+  border: none;
+  height: inherit;
+  font-size: 17px;
+  padding-left: 20px;
+  padding-top: 7px;
+  width: 100%;
+  z-index: 2;
+}
+.signin-input-container label {
+  position: absolute;
+  color: grey;
+  font-size: 17px;
+  padding-left: 20px;
+  margin-top: 12px;
+}
+input:focus + label {
+  margin-top: 3px;
+  font-size: 12px;
+}
+input:not(:placeholder-shown) + label {
+  margin-top: 3px;
+  font-size: 12px;
+}
+input[type='email']:invalid {
+  color: red;
+}
+.error {
+  display: none;
+  position: relative;
+  font-size: 13px;
+  color: #e87c03;
+  margin-top: -8px;
+}
+input:not(:focus):not(:placeholder-shown):invalid ~ .error {
+  display: block;
+}
+
+.signin-button {
+  width: 314px;
+  height: 50px;
+}
+
+.signin-button button {
+  width: fit-content;
+  background-color: #e50914;
+  height: inherit;
+  width: inherit;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.remore {
+  margin-top: 40px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+.remore input {
+  height: 18px;
+  width: 18px;
+  outline: none;
+  border: none;
+  margin-left: 0px;
+}
+.signup-help {
+  color: #737373;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 50px;
+}
+.signup-help a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.signup-help a:hover {
+  text-decoration: underline;
+  color: white;
+  font-weight: 500;
+}
+.protect-help {
+  max-width: fit-content;
+  color: #737373;
+  font-size: 13px;
+  margin-top: 15px;
+}
+.protect-help a {
+  text-decoration: none;
+  color: #0071eb;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: left;
+  position: absolute;
+  color: white;
+  width: 100%;
+  height: 350px;
+  z-index: 1;
+  top: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(-100%);
+  /* margin-top: 350px; */
+}
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer a:hover {
+  text-decoration: underline;
+}

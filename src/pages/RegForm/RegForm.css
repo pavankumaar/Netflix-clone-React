@@ -1,0 +1,23 @@
+.regform-body-container {
+  width: 400px !important;
+  margin-top: -150px;
+}
+.regform-step {
+  font-size: 14px;
+}
+.regform-title {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.regform-context {
+  margin-top: 10px;
+}
+.regform-input {
+  width: 100%;
+  margin-top: 15px;
+  height: 50px;
+  outline: none;
+  font-size: 15px;
+  padding-left: 10px;
+}

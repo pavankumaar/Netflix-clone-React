@@ -1,0 +1,243 @@
+.login-page-container {
+  background-color: rgb(58, 58, 58);
+}
+.main_image {
+  width: 100%;
+  position: relative;
+}
+.main_image img {
+  width: 100%;
+  height: 100%;
+}
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 200px #000000;
+  top: 0;
+  left: 0;
+}
+.img-gradient {
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.logoabs {
+  position: absolute;
+  margin-top: 15px;
+}
+.logo {
+  transform: scale(1, 1.6);
+  z-index: 10;
+  margin-left: 40px;
+  color: #e50914;
+  font-size: 35px;
+  font-weight: 900;
+}
+.buttons {
+  display: flex;
+  float: right;
+  z-index: 10;
+  color: white;
+  position: absolute;
+  right: 0;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+
+.buttons .language {
+  display: flex;
+  border: 1px solid white;
+  border-color: rgba(252, 252, 252, 0.8);
+  width: 93px;
+  height: 36px;
+  padding-right: 5px;
+  background-color: #000000;
+  border-radius: 3px;
+}
+
+.buttons .language select {
+  border-radius: inherit;
+  outline: none;
+  border: none;
+  width: inherit;
+  height: inherit;
+  color: white;
+  font-size: 15px;
+  padding: 3px;
+  background-color: inherit;
+}
+
+.buttons .signin {
+  width: 80px;
+  /* height: 36px; */
+  background-color: #e50914;
+  color: white;
+  border-radius: 4px;
+  margin-top: 0px;
+  margin-left: 20px;
+  border: none;
+  font-size: 15px;
+  padding: 8px 0px 8px 0px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.message-container {
+  text-align: center;
+  position: absolute;
+  color: white;
+  z-index: 10;
+  top: 50%;
+  color: white;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text-title {
+  margin-block: unset;
+  font-size: 4rem;
+}
+.text-subtitle {
+  font-weight: 400;
+  font-size: 1.625rem;
+}
+.email-form {
+  display: flex;
+  height: 70px;
+}
+.email-form input {
+  font-size: 17px;
+  padding-left: 10px;
+  width: 500px;
+  height: inherit;
+  background-color: white;
+  outline: none;
+  border: none;
+}
+.email-form .submit {
+  width: 246px;
+  color: white;
+  border-radius: 0;
+  height: 72px;
+  background-color: #e50914;
+  font-size: 27px;
+  text-transform: capitalize;
+}
+.email-form a {
+  text-decoration: none;
+}
+.email-form .submit:hover {
+  background-color: red;
+}
+.faq-container {
+  display: grid;
+  margin-top: 8px;
+  background-color: black;
+  color: white;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  /* padding: 60px; */
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+.faq-title {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+.acc-container {
+  width: 815px;
+  height: fit-content;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.acc-text {
+  background-color: #303030;
+  display: flex;
+  position: relative;
+  font-weight: 400;
+  font-size: 27px;
+  align-items: center;
+  justify-content: space-between;
+}
+.acc-title {
+  height: 75px;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+.acc-subtitle {
+  white-space: pre-line;
+  height: fit-content;
+  padding: 20px 20px 20px 30px;
+  margin-top: 2px;
+}
+.acc-title svg {
+  height: 40px;
+  width: 40px;
+}
+.rotate-icon {
+  transform: rotate(-45deg);
+}
+.signupform {
+  margin-top: 30px;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+}
+.footer-card {
+  font-size: 16px;
+  margin-top: 8px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #000000;
+  color: gray;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.footer-card .footer-table {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.footer-card td {
+  width: 210px;
+  padding-bottom: 12px;
+}
+.footer-card select {
+  margin-top: 20px;
+  border-radius: 2px;
+  border: 0;
+  outline: 1px solid;
+  width: 132px;
+  height: 53px;
+  color: gray;
+  font-size: 15px;
+  padding-left: 10px;
+  background-color: inherit;
+  border-right: 10px solid transparent;
+}
+.footer-card .netflixtitle {
+  margin-top: 20px;
+  color: gray;
+}
+.footer-card a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer-card a:hover {
+  text-decoration: underline;
+}

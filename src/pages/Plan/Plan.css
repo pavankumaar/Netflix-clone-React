@@ -1,0 +1,11 @@
+.context-list li {
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.context-list svg {
+  color: red;
+  height: 30px;
+  width: 30px;
+  padding-right: 10px;
+}
