@@ -1,9 +1,10 @@
 .planform-body {
-  height: 150vh;
+  /* height: fit-content; */
 }
 
 .planform-body-container {
-  margin-top: -50px;
+  margin-top: 20px;
+  height: fit-content;
   width: fit-content;
 }
 

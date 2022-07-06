@@ -18,19 +18,22 @@
   color: black;
 }
 .reg-body {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
+  max-width: 987px;
 }
 .reg-body-container {
-  width: 335px;
-  height: 400px;
+  width: 330px;
+  /* margin: auto; */
+  margin-top: 100px;
+  margin-bottom: 100px;
+  height: fit-content;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .reg-body-container img {
   transform: scale(0.5);

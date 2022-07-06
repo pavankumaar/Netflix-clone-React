@@ -1,8 +1,8 @@
-.creditoption-body {
-  height: 120vh;
-}
 .creditoption-body-container {
   width: 400px;
+  height: fit-content;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .creditoption-body-container img {
   height: 50px;
