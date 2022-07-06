@@ -13,7 +13,7 @@ import UpiOption from './pages/UpiOption/UpiOption'
 
 function App() {
   return (
-    <Router>
+    <Router basename='/Netflix-clone-React'>
       <Routes>
         <Route exact path='/' element={<Signup />} />
         <Route path='/login' element={<SignIn />} />
