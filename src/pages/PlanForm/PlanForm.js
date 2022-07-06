@@ -51,6 +51,9 @@ class PlanForm extends Component {
       selectedPlan: 'Basic',
     }
   }
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   changeSelectedPlan(plan) {
     this.setState({ selectedPlan: plan })
   }
@@ -59,14 +62,16 @@ class PlanForm extends Component {
       <>
         <div className='registration-container'>
           <div className='reg-header'>
-            <div className='logo'>NETFLIX</div>
+            <div className='netflixlogo'>
+              <DeviceSvg device='netflix'></DeviceSvg>
+            </div>
             <div className='reg-signin'>
               <Link to='/login'>
                 <span>Sign Out</span>
               </Link>
             </div>
           </div>
-          <div className='reg-body planform-body'>
+          <div className='reg-body planform-body animate'>
             <div className='reg-body-container planform-body-container'>
               <div>
                 <div className='step-indicator'>STEP 2 OF 3</div>
@@ -147,7 +152,7 @@ class PlanForm extends Component {
                   <div>Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard, and 1 with Basic and Mobile.</div>
                 </div>
                 <div className='planform-submit'>
-                  <Link to='/signup/regform'>
+                  <Link to='/signup/paymentPicker'>
                     <button className='reg-submit'>Next</button>
                   </Link>
                 </div>

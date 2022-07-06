@@ -1,0 +1,50 @@
+.upioption-body {
+  height: 90vh;
+  align-items: flex-start;
+}
+.upioption-body-container {
+  margin-top: 50px;
+  width: 400px;
+}
+
+.upi-dropdown {
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid black;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.upi-container {
+  width: 400px;
+  position: absolute;
+  background-color: white;
+  border-top: 0px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.upi {
+  display: flex;
+  width: 380px;
+  height: 25px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.upi-container .upi:hover {
+  background-color: #f3f3f3;
+}
+.upi img {
+  width: 80px;
+  height: 60px;
+  margin: 0;
+  margin-left: -20px;
+}
+.upi .title {
+  margin-left: -15px;
+}

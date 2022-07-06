@@ -3,18 +3,24 @@ import './Registration.css'
 import { Link } from 'react-router-dom'
 
 import foorMenuList from '../../Assets/json/Login/footermenu.json'
+import DeviceSvg from '../../components/DeviceSvg/DeviceSvg'
 
 class Registration extends Component {
   constructor(props) {
     super(props)
     this.foorMenuList = foorMenuList
   }
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
       <>
         <div className='registration-container'>
           <div className='reg-header'>
-            <div className='logo'>NETFLIX</div>
+            <div className='netflixlogo'>
+              <DeviceSvg device='netflix'></DeviceSvg>
+            </div>
             <div className='reg-signin'>
               <Link to='/login'>
                 <span>Sign In</span>
@@ -22,17 +28,11 @@ class Registration extends Component {
             </div>
           </div>
           <div className='reg-body'>
-            <div className='reg-body-container'>
-              <img
-                src='https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Devices.png'
-                alt='devices'
-              ></img>
+            <div className='reg-body-container animate'>
+              <img src='https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Devices.png' alt='devices'></img>
               <div className='step-indicator'>STEP 1 OF 3</div>
               <span className='step-title'>Finish setting up your account</span>
-              <div className='step-context'>
-                Netflix is personalised for you. Create a password to watch on
-                any device at any time.
-              </div>
+              <div className='step-context'>Netflix is personalised for you. Create a password to watch on any device at any time.</div>
               <div>
                 <Link to='/signup/regform'>
                   <button className='reg-submit'>Next</button>

@@ -4,23 +4,25 @@ import { Done } from '@material-ui/icons'
 import { Link } from 'react-router-dom'
 
 import foorMenuList from '../../Assets/json/Login/footermenu.json'
+import DeviceSvg from '../../components/DeviceSvg/DeviceSvg'
 
 class Plan extends Component {
   constructor(props) {
     super(props)
     this.foorMenuList = foorMenuList
-    this.contextList = [
-      'No commitments, cancel anytime.',
-      'Everything on Netflix for one low price.',
-      'No ads and no extra fees. Ever.',
-    ]
+    this.contextList = ['No commitments, cancel anytime.', 'Everything on Netflix for one low price.', 'No ads and no extra fees. Ever.']
+  }
+  componentDidMount() {
+    window.scrollTo(0, 0)
   }
   render() {
     return (
       <>
         <div className='registration-container'>
           <div className='reg-header'>
-            <div className='logo'>NETFLIX</div>
+            <div className='netflixlogo'>
+              <DeviceSvg device='netflix'></DeviceSvg>
+            </div>
             <div className='reg-signin'>
               <Link to='/login'>
                 <span>Sign Out</span>
@@ -28,11 +30,8 @@ class Plan extends Component {
             </div>
           </div>
           <div className='reg-body'>
-            <div className='reg-body-container'>
-              <img
-                style={{ transform: 'scale(0.6)' }}
-                src='https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Checkmark.png'
-              ></img>
+            <div className='reg-body-container animate'>
+              <img style={{ transform: 'scale(0.6)' }} src='https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Checkmark.png'></img>
               <div className='step-indicator'>STEP 2 OF 3</div>
               <span className='step-title'>Choose your plan.</span>
               <div className='context-list'>

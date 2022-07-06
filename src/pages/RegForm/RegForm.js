@@ -3,18 +3,24 @@ import './RegForm.css'
 import { Link } from 'react-router-dom'
 
 import foorMenuList from '../../Assets/json/Login/footermenu.json'
+import DeviceSvg from '../../components/DeviceSvg/DeviceSvg'
 
 class RegForm extends Component {
   constructor(props) {
     super(props)
     this.foorMenuList = foorMenuList
   }
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
       <>
         <div className='registration-container'>
           <div className='reg-header'>
-            <div className='logo'>NETFLIX</div>
+            <div className='netflixlogo'>
+              <DeviceSvg device='netflix'></DeviceSvg>
+            </div>
             <div className='reg-signin'>
               <Link to='/login'>
                 <span>Sign In</span>
@@ -22,26 +28,16 @@ class RegForm extends Component {
             </div>
           </div>
           <div className='reg-body'>
-            <div className='reg-body-container regform-body-container'>
+            <div className='reg-body-container regform-body-container animate'>
               <div>
-                <div className='regform-step'>STEP 1 OF 3</div>
-                <div className='regform-title'>
-                  Create a password to start your membership
+                <div className='regform-step'>
+                  STEP <b>1</b> OF <b>3</b>
                 </div>
-                <div className='regform-context'>
-                  Just a few more steps and you're done!
-                </div>
+                <div className='regform-title'>Create a password to start your membership</div>
+                <div className='regform-context'>Just a few more steps and you're done!</div>
                 <div className='regform-context'>We hate paperwork, too.</div>
-                <input
-                  className='regform-input'
-                  placeholder='Email'
-                  type='text'
-                ></input>
-                <input
-                  className='regform-input'
-                  placeholder='Password'
-                  type='text'
-                ></input>
+                <input className='regform-input' placeholder='Email' type='text'></input>
+                <input className='regform-input' placeholder='Password' type='text'></input>
                 <Link to='/signup/plan'>
                   <button style={{ width: '100%' }} className='reg-submit'>
                     Next
