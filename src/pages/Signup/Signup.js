@@ -36,7 +36,7 @@ class Signup extends Component {
         <div className='main_image'>
           <div className='header'>
             {/* <div className='logo logoabs'>NETFLIX</div> */}
-            <div className='netflixlogo logoabs'>
+            <div className='netflixlogo'>
               <DeviceSvg device='netflix'></DeviceSvg>
             </div>
             <div className='buttons'>
@@ -51,12 +51,49 @@ class Signup extends Component {
               </Link>
             </div>
           </div>
-          <div>
-            <div className='message-container'>
-              <h1 className='text-title'>Unlimited movies, TV shows and more</h1>
-              <h2 className='text-subtitle'>Watch anywhere. Cancel anytime.</h2>
-              <form action='GET'>
-                <h3 style={{ fontSize: '20px' }} className='text-subtitle'>
+          <div className='message-container'>
+            <h1 className='text-title'>Unlimited movies, TV shows and more</h1>
+            <h2 className='text-subtitle'>Watch anywhere. Cancel anytime.</h2>
+            <form style={{ width: 'inherit' }} action='GET'>
+              <h3 style={{ fontSize: '1.25rem' }} className='text-subtitle form-text-title'>
+                Ready to watch? Enter your email to create or restart your membership.
+              </h3>
+              <div className='email-form'>
+                <input type='text' placeholder='Email address' />
+                <Link to='/signup/registration'>
+                  <Button className='submit' endIcon={<KeyboardArrowRight style={{ transform: 'scale(1.5)' }} />}>
+                    Get Strated
+                  </Button>
+                </Link>
+              </div>
+            </form>
+          </div>
+          <div class='img-gradient'></div>
+        </div>
+        <div className='story-card-container'>
+          {this.storyCardList.map((storyCard) => {
+            return <StoryCard title={storyCard.title} subtitle={storyCard.subtitle} image={storyCard.image} type={storyCard.type} />
+          })}
+        </div>
+        <div>
+          <div className='faq-section'>
+            <div className='faq-container'>
+              <h1 className='faq-title'>Frequently Asked Questions</h1>
+              {this.faqList.map((faq) => {
+                return (
+                  <div className='acc-container' onClick={() => this.handleFaqClick(faq.faqId)}>
+                    <div className='acc-title acc-text'>
+                      <p>{faq.question}</p>
+                      <div className={this.state.faq === faq.faqId ? 'rotate-icon' : ''}>
+                        <Add></Add>
+                      </div>
+                    </div>
+                    {this.state.faq === faq.faqId && <div className='acc-subtitle acc-text'>{faq.answer}</div>}
+                  </div>
+                )
+              })}
+              <form style={{ width: 'inherit' }} action='GET'>
+                <h3 style={{ fontSize: '1.25rem', textAlign: 'center' }} className='text-subtitle form-text-title'>
                   Ready to watch? Enter your email to create or restart your membership.
                 </h3>
                 <div className='email-form'>
@@ -69,66 +106,17 @@ class Signup extends Component {
                 </div>
               </form>
             </div>
-            <img src={'https://assets.nflxext.com/ffe/siteui/vlv3/271ac55e-7228-438e-824e-92db37981e59/993003ba-1a9f-4b48-854f-4959e42116f3/IN-en-20220627-popsignuptwoweeks-perspective_alpha_website_large.jpg'}></img>
-            <div className='shadow'></div>
-            <div class='img-gradient'></div>
-          </div>
-        </div>
-        <div className='story-card-container'>
-          {this.storyCardList.map((storyCard) => {
-            return <StoryCard title={storyCard.title} subtitle={storyCard.subtitle} image={storyCard.image} type={storyCard.type} />
-          })}
-        </div>
-        <div className='faq-container'>
-          <h1 className='faq-title'>Frequently Asked Questions</h1>
-          {this.faqList.map((faq) => {
-            return (
-              <div className='acc-container' onClick={() => this.handleFaqClick(faq.faqId)}>
-                <div className='acc-title acc-text'>
-                  <p>{faq.question}</p>
-                  <div className={this.state.faq === faq.faqId ? 'rotate-icon' : ''}>
-                    <Add></Add>
-                  </div>
-                </div>
-                {this.state.faq === faq.faqId && <div className='acc-subtitle acc-text'>{faq.answer}</div>}
-              </div>
-            )
-          })}
-          <div className='signupform'>
-            <form action='GET'>
-              <h3 style={{ fontSize: '20px' }} className='text-subtitle'>
-                Ready to watch? Enter your email to create or restart your membership.
-              </h3>
-              <div className='email-form'>
-                <input type='text' placeholder='Email address' />
-                <Button className='submit' endIcon={<KeyboardArrowRight style={{ transform: 'scale(1.5)' }} />}>
-                  Get started
-                </Button>
-              </div>
-            </form>
           </div>
         </div>
         <div className='footer-card'>
           <p>
             Questions? Call <a href=''>000-800-040-1843</a>
           </p>
-          <div className='footer-table'>
-            <table>
-              {this.foorMenuList.map((row) => {
-                return (
-                  <tr>
-                    {row.map((item) => {
-                      return (
-                        <td>
-                          <a href=''>{item}</a>
-                        </td>
-                      )
-                    })}
-                  </tr>
-                )
-              })}
-            </table>
-          </div>
+          <ul className='footer-list'>
+            {this.foorMenuList.map((link) => {
+              return <li className='footer-link'>{link}</li>
+            })}
+          </ul>
           <div class='select-wrapper'>
             <select name='select' id='select' defaultValue='eng'>
               <option value='eng'>English</option>

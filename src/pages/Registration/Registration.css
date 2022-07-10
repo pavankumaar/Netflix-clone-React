@@ -1,15 +1,15 @@
 .reg-header {
-  width: 100%;
+  width: inherit;
   height: 90px;
   border-bottom: 1px solid rgb(207, 206, 206);
   display: flex;
   position: relative;
   align-items: center;
   justify-content: space-between;
+  padding: 0 40px;
 }
 .reg-signin {
   position: relative;
-  margin-right: 30px;
   font-size: 19px;
   font-weight: 700;
 }
@@ -65,4 +65,14 @@
   min-height: 64px;
   margin-top: 20px;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 550px) {
+  .reg-header {
+    height: 45px !important;
+    padding: 0 10px !important;
+  }
+  .reg-signin {
+    font-size: 15px !important;
+  }
 }

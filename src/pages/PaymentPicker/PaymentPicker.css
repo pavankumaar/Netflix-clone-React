@@ -1,5 +1,7 @@
 .paymentpicker-body-container {
   margin-top: 50px;
+  width: fit-content !important;
+  padding: 20px;
 }
 .payment-text {
   width: 220px;
@@ -9,6 +11,8 @@
 }
 .payments-container {
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
 .payments-container a {
   text-decoration: none;
@@ -16,12 +20,13 @@
 }
 .payments {
   margin-bottom: 5px;
-  width: 470px;
-  height: 60px;
+  width: inherit;
+  max-width: 470px;
+  height: fit-content;
   border: 2px solid rgb(180, 179, 179);
   display: flex;
   border-radius: 5px;
-  padding-left: 20px;
+  padding-left: 15px;
   justify-content: space-between;
   align-items: center;
 }
@@ -38,6 +43,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (max-width: 480px) {
+  .payment-data {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
 }
 .payments svg {
   height: 40px;

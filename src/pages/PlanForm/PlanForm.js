@@ -90,27 +90,25 @@ class PlanForm extends Component {
                     })}
                   </ul>
                 </div>
-                <div className='plan-item-container'>
-                  {['Mobile', 'Basic', 'Standard', 'Premium'].map((plan) => {
-                    return (
-                      <div
-                        style={{
-                          opacity: this.state.selectedPlan === plan ? '1' : '0.6',
-                        }}
-                      >
-                        <div onClick={() => this.changeSelectedPlan(plan)} className='plan-item'>
-                          {plan}
+                <div className='plan-section'>
+                  <div className='plan-item-container'>
+                    {['Mobile', 'Basic', 'Standard', 'Premium'].map((plan) => {
+                      return (
+                        <div className='plan-item-div'>
+                          <div style={{ opacity: this.state.selectedPlan === plan ? '1' : '0.6' }} onClick={() => this.changeSelectedPlan(plan)} className='plan-item'>
+                            {plan}
+                          </div>
+                          <div className='pointer' style={{ opacity: this.state.selectedPlan === plan ? '1' : '0' }}></div>
                         </div>
-                        {this.state.selectedPlan === plan && <div className='pointer'></div>}
-                      </div>
-                    )
-                  })}
+                      )
+                    })}
+                  </div>
                 </div>
-                <div className='planform-table'>
+                <div className='planform-table' style={{ display: 'block' }}>
                   <table>
                     {this.planList.map((plan) => {
                       return (
-                        <tr>
+                        <tr className='trow'>
                           <td className='td-title'>{plan.title}</td>
                           <td onClick={() => this.changeSelectedPlan('Mobile')} className={this.state.selectedPlan === 'Mobile' ? 'td-text selected' : 'td-text'}>
                             {plan.mobile}
@@ -164,23 +162,11 @@ class PlanForm extends Component {
               <p>
                 Questions? Call <a href=''>000-800-040-1843</a>
               </p>
-              <div className='footer-table'>
-                <table>
-                  {this.foorMenuList.map((row) => {
-                    return (
-                      <tr>
-                        {row.map((item) => {
-                          return (
-                            <td>
-                              <a href=''>{item}</a>
-                            </td>
-                          )
-                        })}
-                      </tr>
-                    )
-                  })}
-                </table>
-              </div>
+              <ul className='footer-list'>
+                {this.foorMenuList.map((link) => {
+                  return <li className='footer-link'>{link}</li>
+                })}
+              </ul>
               <div class='select-wrapper'>
                 <select name='select' id='select' defaultValue='eng'>
                   <option value='eng'>English</option>

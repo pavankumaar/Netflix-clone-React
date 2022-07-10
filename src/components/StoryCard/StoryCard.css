@@ -3,15 +3,34 @@
   display: flex;
   color: white;
   background-color: black;
-  width: 100%;
+  width: -webkit-fill-available;
   height: 473px;
   position: relative;
   align-items: center;
   justify-content: center;
+  padding: 50px;
+}
+@media screen and (max-width: 1204px) {
+  .storycard {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 550px) {
+  .storycard .title {
+    font-size: 1.6rem !important;
+  }
+  .storycard .subtitle {
+    margin-top: 10px !important;
+    font-size: 1.2rem !important;
+  }
+  .storycard {
+    height: 330px !important;
+  }
 }
 
 .storycard .text {
-  width: 500px;
+  width: fit-content;
+  text-align: center;
 }
 .storycard .image {
   margin-left: 100px;
@@ -20,6 +39,12 @@
 .storycard img {
   width: 500px;
   height: 400px;
+}
+@media screen and (max-width: 1204px) {
+  .storycard img {
+    width: 300px;
+    height: 200px;
+  }
 }
 .storycard .title {
   margin-block: unset;

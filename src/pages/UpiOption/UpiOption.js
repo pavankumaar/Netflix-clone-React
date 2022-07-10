@@ -105,23 +105,11 @@ class UpiOption extends Component {
               <p>
                 Questions? Call <a href=''>000-800-040-1843</a>
               </p>
-              <div className='footer-table'>
-                <table>
-                  {this.foorMenuList.map((row) => {
-                    return (
-                      <tr>
-                        {row.map((item) => {
-                          return (
-                            <td>
-                              <a href=''>{item}</a>
-                            </td>
-                          )
-                        })}
-                      </tr>
-                    )
-                  })}
-                </table>
-              </div>
+              <ul className='footer-list'>
+                {this.foorMenuList.map((link) => {
+                  return <li className='footer-link'>{link}</li>
+                })}
+              </ul>
               <div class='select-wrapper'>
                 <select name='select' id='select' defaultValue='eng'>
                   <option value='eng'>English</option>
